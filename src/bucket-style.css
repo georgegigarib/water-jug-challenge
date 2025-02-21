@@ -1,0 +1,106 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .input-group,
+  .button-group {
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input {
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+  
+  .jug-status {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 5px 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .reset-button {
+    grid-column: span 2;
+    background-color: #dc3545;
+  }
+  
+  .reset-button:hover {
+    background-color: #a71d2a;
+  }
+  
+  .log {
+    text-align: left;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-top: 2px solid #007bff;
+    padding-top: 10px;
+  }
+  
+  .log ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .log li {
+    background: #e9ecef;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .success-message,
+  .error-message {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .success-message {
+    background: #28a745;
+    color: white;
+  }
+  
+  .success-message button {
+    background: white;
+    color: #28a745;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    background: #dc3545;
+    color: white;
+  }
+  
