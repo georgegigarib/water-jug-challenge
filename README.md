@@ -7,15 +7,16 @@ This project implements the Water Jug Challenge using Vue 3 and TypeScript. The 
 1. Clone the repository.
 2. Install dependencies:
    ```sh
-   npm install
+   bun install
    ```
 3. Start the development server:
    ```sh
-   npm run dev
+   bun dev
    ```
 
 
 ## Technologies Used
+- bun
 - Vue 3 with Composition API
 - TypeScript
 - CSS for styling
