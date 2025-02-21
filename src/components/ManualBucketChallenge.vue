@@ -107,27 +107,34 @@ const validateInputs = (): boolean => {
 
 //6 different possible movements
 
+const disableActions = computed(() => hasError.value || success.value)
+
 const fillJug1 = () => {
+  if (disableActions.value) return
   jug1.value = jug1Capacity.value;
   steps.value.push(`Filled Jug 1 (${jug1Capacity.value}L)`);
 };
 
 const fillJug2 = () => {
+  if (disableActions.value) return
   jug2.value = jug2Capacity.value;
   steps.value.push(`Filled Jug 2 (${jug2Capacity.value}L)`);
 };
 
 const emptyJug1 = () => {
+  if (disableActions.value) return
   jug1.value = 0;
   steps.value.push("Emptied Jug 1");
 };
 
 const emptyJug2 = () => {
+  if (disableActions.value) return
   jug2.value = 0;
   steps.value.push("Emptied Jug 2");
 };
 
 const pourJug1ToJug2 = () => {
+  if (disableActions.value) return
   const transfer = Math.min(jug1.value, jug2Capacity.value - jug2.value);
   jug1.value -= transfer;
   jug2.value += transfer;
@@ -135,6 +142,7 @@ const pourJug1ToJug2 = () => {
 };
 
 const pourJug2ToJug1 = () => {
+  if (disableActions.value) return
   const transfer = Math.min(jug2.value, jug1Capacity.value - jug1.value);
   jug2.value -= transfer;
   jug1.value += transfer;
@@ -144,6 +152,8 @@ const pourJug2ToJug1 = () => {
 const reset = () => {
   jug1Capacity.value = 0;
   jug2Capacity.value = 0;
+  jug1.value = 0
+  jug2.value = 0
   goal.value = 1;
   steps.value = [];
   hasError.value = false;
